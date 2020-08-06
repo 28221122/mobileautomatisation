@@ -1,17 +1,22 @@
 class HomeScreen
 
   def initialize
-    @burger_menu_button = Elements.new(:xpath,'//*[@content-desc="Strawberrynet"]')
-    @sign_in_or_register_button = Elements.new(:xpath,'//*[@resource-id="com.strawberrynetNew.android:id/design_menu_item_text"][lower-case(@text)="sign in or register"]')
+    @menu_button = Elements.new(:xpath,'//*[@resource-id="com.view9.foreveryng:id/action_overflow_menu"][@content-desc="Overflow Menu"]')
+    @log_in = Elements.new(:xpath,'//android.widget.LinearLayout[7]/android.widget.LinearLayout[@resource-id="com.view9.foreveryng:id/content"]')
+    @wishlist = Elements.new(:xpath,'//android.widget.LinearLayout[4]/android.widget.LinearLayout[@resource-id="com.view9.foreveryng:id/content"]')
   end
 
-#  def click_burger_menu
-#    @burger_menu_button.click
-#  end
+  def click_menu_button
+    @menu_button.click
+  end
 
-#  def click_sign_in_or_register_button
-#    @sign_in_or_register_button.click
-#  end
+  def click_log_in
+    @log_in.click
+  end
+
+  def click_wishlist
+    @wishlist.click
+  end
 
 
 end
