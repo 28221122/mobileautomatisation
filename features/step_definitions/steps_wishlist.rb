@@ -14,10 +14,14 @@ end
 
 And(/^Like all the items that are visible$/) do
   @screens.autorized_whiwlist.click_all_wishlist_items
-end
+  end
 
 And(/^I going to Wish\-list$/) do
   @screens.home_screen.click_menu_button
   @screens.home_screen.click_wishlist
 
-end
+  end
+
+#Then(/^Validate that all the added items are there$/) do
+#@screens.autorized_whiwlist.click_all_wishlist_items
+#end
